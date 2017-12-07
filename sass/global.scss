@@ -1,12 +1,5 @@
 body {
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
 
-  background-image: url("../img/body_bg/retina_wood.png");
-  background-color: #ead4b3;
-}
-
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  body {
-    background-image: url("../img/body_bg/retina_wood_@2X.png");
-  }
+  background-color: #f7d065;
 }
