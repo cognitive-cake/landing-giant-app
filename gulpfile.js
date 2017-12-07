@@ -110,6 +110,7 @@ gulp.task('serve', function () {
   });
 
   gulp.watch('sass/**/*.{scss,sass}', ['style-project']);
+  gulp.watch('pug/**/*.pug', ['pug']);
   gulp.watch('*.html').on('change', server.reload);
 });
 

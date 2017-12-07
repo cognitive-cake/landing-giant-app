@@ -1,7 +1,6 @@
 body {
-  font-family: "Ubuntu", Arial, sans-serif;
-  background-image: url("../img/body_bg/retina_wood.png");
-  background-color: #ead4b3; }
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #f7d065; }
 
 /* dosis-regular - latin */
 @font-face {
@@ -58,6 +57,3 @@ body {
   font-weight: 700;
   src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v18-latin-700.woff2") format("woff2"), url("../fonts/roboto-v18-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  body {
-    background-image: url("../img/body_bg/retina_wood_@2X.png"); } }
