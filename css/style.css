@@ -56,11 +56,20 @@
 
 body {
   font-family: "Roboto", Arial, sans-serif;
-  background-color: #f7d065; }
+  background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
 
 .navbar-collapse {
   -webkit-box-flex: 0;
           flex-grow: 0; }
 
 .header {
-  background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
+  position: relative;
+  background-image: url("/img/bg-header.png");
+  background-repeat: no-repeat;
+  background-position: right center; }
+  .header .navbar {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 140px; }
+  .header .title {
+    margin-bottom: 220px; }
