@@ -80,7 +80,7 @@ body {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 140px; }
-  .header .title {
+  .header-title {
     margin-bottom: 220px; }
 
 .features-item p {
@@ -99,3 +99,16 @@ body {
     left: 50%;
     -webkit-transform: translate(-45%, -50%);
             transform: translate(-45%, -50%); }
+
+.preview {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+.gallery {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #f7fafc; }
+  .gallery__header p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto; }
