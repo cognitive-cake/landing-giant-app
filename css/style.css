@@ -112,3 +112,19 @@ body {
     max-width: 650px;
     margin-left: auto;
     margin-right: auto; }
+
+.prices {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  .prices__header {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px; }
+
+.price-card h5 {
+  display: block;
+  background-color: #f7fafc; }
+
+.price-card__features {
+  background-color: #f7fafc; }
