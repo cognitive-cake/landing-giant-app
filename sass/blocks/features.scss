@@ -1,0 +1,27 @@
+.features {
+
+}
+
+.features-item {
+  & p {
+    color: $text-grey;
+  }
+
+  &__icon {
+    position: relative;
+
+    width: 75px;
+    height: 75px;
+    margin-right: 25px;
+
+    border: 1px solid $color-grey;
+    border-radius: 38px;
+
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%, -50%); // TODO: Выяснить почему по оси X смещение 50% выставляет иконки не по центру. Перебором подобрал подходящее значение - X-45%;
+    }
+  }
+}

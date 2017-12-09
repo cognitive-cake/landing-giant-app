@@ -17,10 +17,12 @@ var run = require('run-sequence');
 var del = require('del');
 var pug = require('gulp-pug');
 var htmlbeautify = require('gulp-html-beautify');
+var wait = require('gulp-wait');
 
 
 gulp.task('style', function () {
   gulp.src('sass/style.scss')
+      .pipe(wait(500))
       .pipe(plumber())
       .pipe(sass())
       .pipe(postcss([
@@ -44,6 +46,7 @@ gulp.task('style', function () {
 
 gulp.task('style-project', function () {
   gulp.src('sass/style.scss')
+      .pipe(wait(500))
       .pipe(plumber())
       .pipe(sass())
       .pipe(postcss([

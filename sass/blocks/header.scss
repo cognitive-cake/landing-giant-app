@@ -1,9 +1,26 @@
 .header {
   position: relative;
-  // background-image: $gradient;
-  background-image: url('/img/bg-header.png');
-  background-repeat: no-repeat;
-  background-position: right center;
+
+  margin-bottom: 120px;
+
+  background-image: $gradient;
+
+  &::before {
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url('/img/bg-header.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+
+  }
 
   & .navbar {
     padding-left: 0;
