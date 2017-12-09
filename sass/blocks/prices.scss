@@ -1,0 +1,27 @@
+.prices {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &__header {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+  }
+}
+
+.price-card {
+  & h5 {
+    display: block;
+    background-color: $color-bg-light;
+  }
+  &__price {
+
+  }
+  &__features {
+    background-color: $color-bg-light;
+  }
+  &__btn {
+
+  }
+}
