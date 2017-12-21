@@ -1,4 +1,5 @@
-const card = document.querySelector('.price-card');
+import debounce from './tools.js';
+
 const pentagon = document.querySelector('.pentagon-block');
 const triangle = pentagon.querySelector('.pentagon-block__triangle');
 
@@ -10,12 +11,11 @@ const setBordersWidth = (num) => {
   triangle.style.borderRightWidth = `${sideSize}px`;
 };
 
-const onSizeChange = (event) => {
-  const element = event.currentTarget;
-  const elementWidth = element.clientWidth;
+const onSizeChange = () => {
+  const pentagonWidth = pentagon.clientWidth;
 
-  setBordersWidth(elementWidth);
+  debounce(setBordersWidth);
 };
 
 setBordersWidth(initialWidth);
-card.addEventListener('resize', onSizeChange);
+window.addEventListener('resize', onSizeChange);

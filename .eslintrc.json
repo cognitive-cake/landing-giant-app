@@ -8,5 +8,8 @@
   },
   "globals": {
     "define": true
+  },
+  "rules": {
+    "import/extensions": "always"
   }
 }

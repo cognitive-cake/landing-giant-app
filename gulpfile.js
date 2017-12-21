@@ -18,6 +18,9 @@ var del = require('del');
 var pug = require('gulp-pug');
 var htmlbeautify = require('gulp-html-beautify');
 var wait = require('gulp-wait');
+var babel = require("gulp-babel");
+var sourcemaps = require("gulp-sourcemaps");
+var concat = require("gulp-concat");
 
 
 gulp.task('style', function () {
@@ -103,6 +106,21 @@ gulp.task('pug', function buildHTML() {
     .pipe(gulp.dest('./'));
 });
 
+gulp.task("babel", function () {
+  return gulp.src("js/*.js")
+    .pipe(babel())
+    .pipe(gulp.dest("js/es5"));
+});
+
+gulp.task("babel", function () {
+  return gulp.src("js/*.js")
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(concat("all.js"))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("js/es5"));
+});
+
 gulp.task('serve', function () {
   server.init({
     server: '.',
@@ -114,6 +132,7 @@ gulp.task('serve', function () {
 
   gulp.watch('sass/**/*.{scss,sass}', ['style-project']);
   gulp.watch('pug/**/*.pug', ['pug']);
+  // gulp.watch('js/*.js', ['babel']);
   gulp.watch('*.html').on('change', server.reload);
 });
 
