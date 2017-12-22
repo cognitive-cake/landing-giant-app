@@ -1,6 +1,9 @@
 .price-card {
   // background-color: $color-bg-light;
-  background-color: rgb(255, 217, 0);
+  margin-bottom: 30px;
+  &__wrapper {
+      background-color: $color-bg-light;
+  }
   &__header {
     display: block;
   }
@@ -11,5 +14,12 @@
   }
   &__btn {
 
+  }
+
+  &:hover .price-card__price {
+    background-image: $gradient;
+  }
+  &:hover .pentagon-block__triangle {
+    border-image: $gradient;
   }
 }

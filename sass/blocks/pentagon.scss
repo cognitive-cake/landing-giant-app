@@ -1,8 +1,10 @@
 .pentagon-block {
   position: relative;
+  min-height: 80px;
+  margin-bottom: 40px;
   &__triangle {
-    position: relative;
-    top: 0;
+    position: absolute;
+    bottom: -40px;
 
     width: 0;
     height: 0;
@@ -10,6 +12,6 @@
     border-left: solid transparent;
     border-right: solid transparent;
 
-    border-top: 40px solid rgb(9, 13, 255);
+    border-top: 40px solid #fff;
   }
 }

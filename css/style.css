@@ -123,19 +123,28 @@ body {
     margin-bottom: 80px; }
 
 .price-card {
-  background-color: #ffd900; }
+  margin-bottom: 30px; }
+  .price-card__wrapper {
+    background-color: #f8fafc; }
   .price-card__header {
     display: block; }
   .price-card__price {
     background-color: #fff; }
+  .price-card:hover .price-card__price {
+    background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
+  .price-card:hover .pentagon-block__triangle {
+    -o-border-image: linear-gradient(to right, #fd712c 0%, #f21780 100%);
+       border-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
 
 .pentagon-block {
-  position: relative; }
+  position: relative;
+  min-height: 80px;
+  margin-bottom: 40px; }
   .pentagon-block__triangle {
-    position: relative;
-    top: 0;
+    position: absolute;
+    bottom: -40px;
     width: 0;
     height: 0;
     border-left: solid transparent;
     border-right: solid transparent;
-    border-top: 40px solid #090dff; }
+    border-top: 40px solid #fff; }
