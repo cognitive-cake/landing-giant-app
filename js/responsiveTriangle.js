@@ -1,20 +1,27 @@
-import debounce from './tools.js';
+const pricesSection = document.querySelector('.prices');
+const firstPentagon = pricesSection.querySelector('.pentagon-block');
+const allTriangles = pricesSection.querySelectorAll('.pentagon-block__triangle');
 
-const pentagon = document.querySelector('.pentagon-block');
-const triangle = pentagon.querySelector('.pentagon-block__triangle');
-
-const initialWidth = pentagon.clientWidth;
+const initialWidth = firstPentagon.clientWidth;
+let lastWidth = null;
 
 const setBordersWidth = (num) => {
+  lastWidth = num;
   const sideSize = num / 2;
-  triangle.style.borderLeftWidth = `${sideSize}px`;
-  triangle.style.borderRightWidth = `${sideSize}px`;
+  for (let i = 0; i < allTriangles.length; i += 1) {
+    const triangle = allTriangles[i];
+    triangle.style.borderLeftWidth = `${sideSize}px`;
+    triangle.style.borderRightWidth = `${sideSize}px`;
+  }
 };
 
 const onSizeChange = () => {
-  const pentagonWidth = pentagon.clientWidth;
+  const pentagonWidth = firstPentagon.clientWidth;
+  if (pentagonWidth === lastWidth) {
+    return;
+  }
 
-  debounce(setBordersWidth);
+  setBordersWidth(pentagonWidth);
 };
 
 setBordersWidth(initialWidth);
