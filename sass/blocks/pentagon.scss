@@ -1,15 +1,9 @@
 .pentagon-block {
   position: relative;
+  margin-bottom: 40px;
   &__triangle {
     position: relative;
-    top: 0;
-
-    width: 0;
-    height: 0;
-
-    border-left: solid transparent;
-    border-right: solid transparent;
-
-    border-top: 40px solid rgb(9, 13, 255);
+    bottom: -40px;
+    background-color: aquamarine;
   }
 }

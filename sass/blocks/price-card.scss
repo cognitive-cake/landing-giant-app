@@ -1,11 +1,14 @@
 .price-card {
-  // background-color: $color-bg-light;
-  background-color: rgb(255, 217, 0);
+  margin-bottom: 30px;
+
+  &__wrapper {
+  background-color: rgba(252, 206, 138, 0.795);
+  }
   &__header {
     display: block;
   }
   &__price {
-    background-color: #fff;
+    background-color: rgb(240, 108, 108);
   }
   &__features {
   }
