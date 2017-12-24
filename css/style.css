@@ -135,6 +135,7 @@ body {
   position: relative;
   margin-bottom: 40px; }
   .pentagon-block__triangle {
-    position: relative;
+    position: absolute;
     bottom: -40px;
+    left: 0px;
     background-color: aquamarine; }

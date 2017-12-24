@@ -2,8 +2,9 @@
   position: relative;
   margin-bottom: 40px;
   &__triangle {
-    position: relative;
+    position: absolute;
     bottom: -40px;
+    left: 0px;
     background-color: aquamarine;
   }
 }
