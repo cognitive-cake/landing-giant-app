@@ -42,11 +42,7 @@ const drawPentagon = (canvas, ctx, fillStyle) => {
   ctx.fill();
 };
 
-
-// Выполнение скрипта
-getWidth();
-for (let i = 0; i < arrayOfCards.length; i += 1) {
-  const singleCard = arrayOfCards[i];
+const createPriceCanvasElement = (singleCard) => {
   const canvas = singleCard.querySelector('.price-canvas__canvas');
   const ctx = canvas.getContext('2d');
   const gradient = createGradient(ctx);
@@ -61,12 +57,19 @@ for (let i = 0; i < arrayOfCards.length; i += 1) {
   singleCard.addEventListener('mouseleave', () => {
     drawPentagon(canvas, ctx, params.colorDefault);
   });
-}
+};
 
-// window.addEventListener('resize', () => {
-//   if (params.width === lastWidth) {
-//     return;
-//   }
-//   redraw();
-//   lastWidth = params.width;
-// });
+
+// Выполнение скрипта
+getWidth();
+arrayOfCards.forEach(createPriceCanvasElement);
+params.lastWidth = params.width;
+
+window.addEventListener('resize', () => {
+  getWidth();
+  if (params.lastWidth === params.width) {
+    return;
+  }
+  arrayOfCards.forEach(createPriceCanvasElement);
+  params.lastWidth = params.width;
+});
