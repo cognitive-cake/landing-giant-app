@@ -8,11 +8,19 @@
     display: block;
   }
   &__price {
-    background-color: rgb(240, 108, 108);
+    position: relative;
+    height: 80px;
+    margin-bottom: 40px;
   }
   &__features {
   }
   &__btn {
 
+  }
+
+  &:hover {
+    .price-card__price {
+      color: #fff;
+    }
   }
 }

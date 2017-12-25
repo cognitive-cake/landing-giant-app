@@ -1,12 +1,14 @@
 const pricesSection = document.querySelector('.prices');
 const firstCard = pricesSection.querySelector('.price-card');
-const firstPentagon = pricesSection.querySelector('.pentagon-block');
-const canvas = pricesSection.querySelector('.pentagon-block__triangle');
+const priceBlock = firstCard.querySelector('.price-card__price');
+const canvas = pricesSection.querySelector('.price-block__canvas');
 const ctx = canvas.getContext('2d');
 
 const params = {
-  width: firstPentagon.clientWidth,
-  height: 40,
+  width: priceBlock.clientWidth,
+  height: 120,
+  triangleHeight: 40,
+  rectHeight: () => params.height - params.triangleHeight,
   colorStart: '#fd712c',
   colorEnd: '#f21780',
 };
@@ -15,7 +17,7 @@ const gradient = ctx.createLinearGradient(0, 0, params.width, 0);
 gradient.addColorStop(0, params.colorStart);
 gradient.addColorStop(1, params.colorEnd);
 
-const initialWidth = firstPentagon.clientWidth;
+const initialWidth = firstCard.clientWidth;
 let lastWidth = null;
 
 const setSize = () => {
@@ -23,31 +25,25 @@ const setSize = () => {
   canvas.setAttribute('height', `${params.height}px`);
 };
 
-setSize();
-
-ctx.fillStyle = 'white';
-ctx.beginPath();
-ctx.moveTo(0, 0);
-ctx.lineTo(params.width, 0);
-ctx.lineTo(params.width / 2, params.height);
-ctx.fill();
-
-firstCard.addEventListener('mouseover', () => {
+const drawPentagon = (fillStyle) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = gradient;
+  ctx.fillStyle = fillStyle;
   ctx.beginPath();
   ctx.moveTo(0, 0);
   ctx.lineTo(params.width, 0);
+  ctx.lineTo(params.width, params.rectHeight());
   ctx.lineTo(params.width / 2, params.height);
+  ctx.lineTo(0, params.rectHeight());
   ctx.fill();
+};
+
+setSize();
+drawPentagon('white');
+
+firstCard.addEventListener('mouseover', () => {
+  drawPentagon(gradient);
 });
 
 firstCard.addEventListener('mouseleave', () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = 'white';
-  ctx.beginPath();
-  ctx.moveTo(0, 0);
-  ctx.lineTo(params.width, 0);
-  ctx.lineTo(params.width / 2, params.height);
-  ctx.fill();
+  drawPentagon('white');
 });

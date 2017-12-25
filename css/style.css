@@ -129,13 +129,31 @@ body {
   .price-card__header {
     display: block; }
   .price-card__price {
-    background-color: #f06c6c; }
+    position: relative;
+    height: 80px;
+    margin-bottom: 40px; }
+  .price-card:hover .price-card__price {
+    color: #fff; }
 
-.pentagon-block {
-  position: relative;
-  margin-bottom: 40px; }
-  .pentagon-block__triangle {
-    position: absolute;
-    bottom: -40px;
-    left: 0px;
-    background-color: transparent; }
+.price-block__canvas {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.price-block__price-value {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: Dosis;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 48px; }
+
+.price-block__sup {
+  font-size: 18px;
+  vertical-align: 21px; }
+
+.price-block__sub {
+  font-size: 18px; }
