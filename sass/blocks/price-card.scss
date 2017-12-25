@@ -21,4 +21,11 @@
   &__btn {
 
   }
+
+  &:hover .price-card__price {
+    background-image: $gradient;
+  }
+  &:hover .pentagon-block__triangle {
+    border-image: $gradient;
+  }
 }
