@@ -129,6 +129,8 @@ body {
     transition-duration: 500ms; }
     .price-card__wrapper:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+      .price-card__wrapper:hover .price-canvas__price-value {
+        color: #fff; }
   .price-card__header {
     display: block; }
   .price-card__price {

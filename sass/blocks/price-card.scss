@@ -6,6 +6,9 @@
   transition-duration: 500ms;
     &:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      .price-canvas__price-value {
+        color: #fff;
+      }
     }
   }
   &__header {
@@ -20,12 +23,5 @@
   }
   &__btn {
 
-  }
-
-  &:hover .price-card__price {
-    background-image: $gradient;
-  }
-  &:hover .pentagon-block__triangle {
-    border-image: $gradient;
   }
 }
