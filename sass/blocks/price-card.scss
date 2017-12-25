@@ -1,4 +1,5 @@
 .price-card {
+<<<<<<< HEAD
   margin-bottom: 30px;
 
   &__wrapper {
@@ -7,6 +8,12 @@
     &:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
+=======
+  // background-color: $color-bg-light;
+  margin-bottom: 30px;
+  &__wrapper {
+      background-color: $color-bg-light;
+>>>>>>> master
   }
   &__header {
     display: block;
@@ -20,5 +27,12 @@
   }
   &__btn {
 
+  }
+
+  &:hover .price-card__price {
+    background-image: $gradient;
+  }
+  &:hover .pentagon-block__triangle {
+    border-image: $gradient;
   }
 }
