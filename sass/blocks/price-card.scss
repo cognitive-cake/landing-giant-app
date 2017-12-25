@@ -3,6 +3,10 @@
 
   &__wrapper {
   background-color: rgba(252, 206, 138, 0.795);
+  transition-duration: 500ms;
+    &:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
   }
   &__header {
     display: block;
@@ -16,11 +20,5 @@
   }
   &__btn {
 
-  }
-
-  &:hover {
-    .price-card__price {
-      color: #fff;
-    }
   }
 }

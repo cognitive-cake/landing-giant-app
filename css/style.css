@@ -125,15 +125,16 @@ body {
 .price-card {
   margin-bottom: 30px; }
   .price-card__wrapper {
-    background-color: rgba(252, 206, 138, 0.795); }
+    background-color: rgba(252, 206, 138, 0.795);
+    transition-duration: 500ms; }
+    .price-card__wrapper:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
   .price-card__header {
     display: block; }
   .price-card__price {
     position: relative;
     height: 80px;
     margin-bottom: 40px; }
-  .price-card:hover .price-card__price {
-    color: #fff; }
 
 .price-canvas__canvas {
   position: absolute;
