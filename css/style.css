@@ -135,12 +135,12 @@ body {
   .price-card:hover .price-card__price {
     color: #fff; }
 
-.price-block__canvas {
+.price-canvas__canvas {
   position: absolute;
   top: 0;
   left: 0; }
 
-.price-block__price-value {
+.price-canvas__price-value {
   position: absolute;
   left: 50%;
   top: 60%;
@@ -151,9 +151,9 @@ body {
   line-height: 24px;
   font-size: 48px; }
 
-.price-block__sup {
+.price-canvas__sup {
   font-size: 18px;
   vertical-align: 21px; }
 
-.price-block__sub {
+.price-canvas__sub {
   font-size: 18px; }
