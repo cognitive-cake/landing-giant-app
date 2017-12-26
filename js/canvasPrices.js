@@ -43,6 +43,7 @@ const drawPentagon = (canvas, ctx, fillStyle) => {
 };
 
 const createPriceCanvasElement = (singleCard) => {
+  const wrapper = singleCard.querySelector('.price-card__wrapper');
   const canvas = singleCard.querySelector('.price-canvas__canvas');
   const ctx = canvas.getContext('2d');
   const gradient = createGradient(ctx);
@@ -50,11 +51,11 @@ const createPriceCanvasElement = (singleCard) => {
   setCanvasSize(canvas);
   drawPentagon(canvas, ctx, params.colorDefault);
 
-  singleCard.addEventListener('mouseover', () => {
+  wrapper.addEventListener('mouseover', () => {
     drawPentagon(canvas, ctx, gradient);
   });
 
-  singleCard.addEventListener('mouseleave', () => {
+  wrapper.addEventListener('mouseleave', () => {
     drawPentagon(canvas, ctx, params.colorDefault);
   });
 };
