@@ -1,26 +1,86 @@
+/* eslint-disable */
+
 'use strict';
 
-var _tools = require('./tools.js');
+var pricesSection = document.querySelector('.prices');
+var firstCard = pricesSection.querySelector('.price-card');
+var firstPentagon = pricesSection.querySelector('.pentagon-block');
+var canvas = pricesSection.querySelector('.pentagon-block__triangle');
+var ctx = canvas.getContext('2d');
 
-var _tools2 = _interopRequireDefault(_tools);
+var params = {
+  width: firstPentagon.clientWidth,
+  height: 40,
+  colorStart: '#fd712c',
+  colorEnd: '#f21780'
+};
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var gradient = ctx.createLinearGradient(0, 0, params.width, 0);
+gradient.addColorStop(0, params.colorStart);
+gradient.addColorStop(1, params.colorEnd);
 
-var pentagon = document.querySelector('.pentagon-block');
-var triangle = pentagon.querySelector('.pentagon-block__triangle');
+var initialWidth = firstPentagon.clientWidth;
+var lastWidth = null;
 
-var initialWidth = pentagon.clientWidth;
+var setSize = function setSize() {
+  canvas.setAttribute('width', params.width + 'px');
+  canvas.setAttribute('height', params.height + 'px');
+};
+
+setSize();
+
+ctx.fillStyle = 'white';
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(params.width, 0);
+ctx.lineTo(params.width / 2, params.height);
+ctx.fill();
+
+firstCard.addEventListener('mouseover', function () {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = gradient;
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.lineTo(params.width, 0);
+  ctx.lineTo(params.width / 2, params.height);
+  ctx.fill();
+});
+
+firstCard.addEventListener('mouseleave', function () {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.lineTo(params.width, 0);
+  ctx.lineTo(params.width / 2, params.height);
+  ctx.fill();
+});
+'use strict';
+
+var pricesSection = document.querySelector('.prices');
+var firstPentagon = pricesSection.querySelector('.pentagon-block');
+var allTriangles = pricesSection.querySelectorAll('.pentagon-block__triangle');
+
+var initialWidth = firstPentagon.clientWidth;
+var lastWidth = null;
 
 var setBordersWidth = function setBordersWidth(num) {
+  lastWidth = num;
   var sideSize = num / 2;
-  triangle.style.borderLeftWidth = sideSize + 'px';
-  triangle.style.borderRightWidth = sideSize + 'px';
+  for (var i = 0; i < allTriangles.length; i += 1) {
+    var triangle = allTriangles[i];
+    triangle.style.borderLeftWidth = sideSize + 'px';
+    triangle.style.borderRightWidth = sideSize + 'px';
+  }
 };
 
 var onSizeChange = function onSizeChange() {
-  var pentagonWidth = pentagon.clientWidth;
+  var pentagonWidth = firstPentagon.clientWidth;
+  if (pentagonWidth === lastWidth) {
+    return;
+  }
 
-  (0, _tools2.default)(setBordersWidth);
+  setBordersWidth(pentagonWidth);
 };
 
 setBordersWidth(initialWidth);
