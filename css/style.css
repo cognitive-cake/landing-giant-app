@@ -125,17 +125,61 @@ body {
 .price-card {
   margin-bottom: 30px; }
   .price-card__wrapper {
-    background-color: rgba(252, 206, 138, 0.795); }
+<<<<<<< HEAD
+    background-color: rgba(252, 206, 138, 0.795);
+    transition-duration: 500ms; }
+    .price-card__wrapper:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
   .price-card__header {
     display: block; }
   .price-card__price {
-    background-color: #f06c6c; }
+    position: relative;
+    height: 80px;
+    margin-bottom: 40px; }
+
+.price-canvas__canvas {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.price-canvas__price-value {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: Dosis;
+  font-weight: 500;
+  font-size: 48px; }
+
+.price-canvas__sup {
+  font-size: 18px;
+  vertical-align: 21px; }
+
+.price-canvas__sub {
+  font-size: 18px; }
+=======
+    background-color: #f8fafc; }
+  .price-card__header {
+    display: block; }
+  .price-card__price {
+    background-color: #fff; }
+  .price-card:hover .price-card__price {
+    background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
+  .price-card:hover .pentagon-block__triangle {
+    -o-border-image: linear-gradient(to right, #fd712c 0%, #f21780 100%);
+       border-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
 
 .pentagon-block {
   position: relative;
+  min-height: 80px;
   margin-bottom: 40px; }
   .pentagon-block__triangle {
     position: absolute;
     bottom: -40px;
-    left: 0px;
-    background-color: transparent; }
+    width: 0;
+    height: 0;
+    border-left: solid transparent;
+    border-right: solid transparent;
+    border-top: 40px solid #fff; }
+>>>>>>> master

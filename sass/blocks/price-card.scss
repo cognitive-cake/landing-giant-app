@@ -1,18 +1,38 @@
 .price-card {
+<<<<<<< HEAD
   margin-bottom: 30px;
 
   &__wrapper {
   background-color: rgba(252, 206, 138, 0.795);
+  transition-duration: 500ms;
+    &:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+=======
+  // background-color: $color-bg-light;
+  margin-bottom: 30px;
+  &__wrapper {
+      background-color: $color-bg-light;
+>>>>>>> master
   }
   &__header {
     display: block;
   }
   &__price {
-    background-color: rgb(240, 108, 108);
+    position: relative;
+    height: 80px;
+    margin-bottom: 40px;
   }
   &__features {
   }
   &__btn {
 
+  }
+
+  &:hover .price-card__price {
+    background-image: $gradient;
+  }
+  &:hover .pentagon-block__triangle {
+    border-image: $gradient;
   }
 }
