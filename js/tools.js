@@ -1,5 +1,5 @@
 const TIME_PARAMETERS = {
-  debounceInterval: 50000,
+  debounceInterval: 500,
 };
 
 let lastTimeout;

@@ -1,4 +1,3 @@
-/* eslint-disable */
 'use strict';
 
 var gulp = require('gulp');
@@ -108,17 +107,10 @@ gulp.task('pug', function buildHTML() {
 
 gulp.task("babel", function () {
   return gulp.src("js/*.js")
-    .pipe(babel())
-    .pipe(gulp.dest("js/es5"));
-});
-
-gulp.task("babel", function () {
-  return gulp.src("js/*.js")
     .pipe(sourcemaps.init())
     .pipe(babel())
-    .pipe(concat("all.js"))
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("js/es5"));
+    .pipe(gulp.dest("js/dist"));
 });
 
 gulp.task('serve', function () {
@@ -132,7 +124,7 @@ gulp.task('serve', function () {
 
   gulp.watch('sass/**/*.{scss,sass}', ['style-project']);
   gulp.watch('pug/**/*.pug', ['pug']);
-  // gulp.watch('js/*.js', ['babel']);
+  gulp.watch('js/*.js', ['babel']);
   gulp.watch('*.html').on('change', server.reload);
 });
 

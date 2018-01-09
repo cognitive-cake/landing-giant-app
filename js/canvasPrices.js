@@ -1,3 +1,5 @@
+import debounce from './tools';
+
 const pricesSection = document.querySelector('.prices');
 const arrayOfCards = pricesSection.querySelectorAll('.price-card');
 const firstPriceCard = arrayOfCards[0];
@@ -67,6 +69,7 @@ arrayOfCards.forEach(createPriceCanvasElement);
 params.lastWidth = params.width;
 
 window.addEventListener('resize', () => {
+  debounce();
   getWidth();
   if (params.lastWidth === params.width) {
     return;
