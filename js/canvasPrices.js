@@ -1,5 +1,3 @@
-import debounce from './tools';
-
 const pricesSection = document.querySelector('.prices');
 const arrayOfCards = pricesSection.querySelectorAll('.price-card');
 const firstPriceCard = arrayOfCards[0];
@@ -13,6 +11,7 @@ const params = {
   colorStart: '#fd712c',
   colorEnd: '#f21780',
   colorDefault: 'white',
+  animationLength: 500,
 };
 
 const getWidth = () => {
@@ -32,8 +31,10 @@ const createGradient = (ctx) => {
   return gradient;
 };
 
-const drawPentagon = (canvas, ctx, fillStyle) => {
+const drawPentagon = (canvas, ctx, fillStyle, alpha) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.globalAlpha = alpha;
   ctx.fillStyle = fillStyle;
   ctx.beginPath();
   ctx.moveTo(0, 0);
@@ -44,6 +45,16 @@ const drawPentagon = (canvas, ctx, fillStyle) => {
   ctx.fill();
 };
 
+const drawAnimation = (startTime, canvas, ctx, color) => {
+  const intervalID = setInterval(() => {
+    const currTime = Date.now();
+    const progress = currTime - startTime;
+    const alphaValue = progress / params.animationLength;
+    drawPentagon(canvas, ctx, color, alphaValue);
+  }, 20);
+  setTimeout(() => clearInterval(intervalID), params.animationLength);
+};
+
 const createPriceCanvasElement = (singleCard) => {
   const wrapper = singleCard.querySelector('.price-card__wrapper');
   const canvas = singleCard.querySelector('.price-canvas__canvas');
@@ -51,14 +62,16 @@ const createPriceCanvasElement = (singleCard) => {
   const gradient = createGradient(ctx);
 
   setCanvasSize(canvas);
-  drawPentagon(canvas, ctx, params.colorDefault);
+  drawPentagon(canvas, ctx, params.colorDefault, 1);
 
-  wrapper.addEventListener('mouseover', () => {
-    drawPentagon(canvas, ctx, gradient);
+  wrapper.addEventListener('mouseenter', () => {
+    const startTime = Date.now();
+    drawAnimation(startTime, canvas, ctx, gradient);
   });
 
+
   wrapper.addEventListener('mouseleave', () => {
-    drawPentagon(canvas, ctx, params.colorDefault);
+    setTimeout(() => drawPentagon(canvas, ctx, params.colorDefault, 1), params.animationLength);
   });
 };
 
@@ -68,7 +81,6 @@ arrayOfCards.forEach(createPriceCanvasElement);
 params.lastWidth = params.width;
 
 window.addEventListener('resize', () => {
-  debounce(() => console.log('debounce!!!'));
   getWidth();
   if (params.lastWidth === params.width) {
     return;
