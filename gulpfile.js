@@ -109,7 +109,8 @@ gulp.task("babel", function () {
   return gulp.src("js/*.js")
     .pipe(sourcemaps.init())
     .pipe(babel())
-    .pipe(sourcemaps.write("."))
+    .pipe(concat("all.js"))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("js/dist"));
 });
 

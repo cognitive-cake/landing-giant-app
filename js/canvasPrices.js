@@ -62,14 +62,13 @@ const createPriceCanvasElement = (singleCard) => {
   });
 };
 
-
 // Выполнение скрипта
 getWidth();
 arrayOfCards.forEach(createPriceCanvasElement);
 params.lastWidth = params.width;
 
 window.addEventListener('resize', () => {
-  debounce();
+  debounce(() => console.log('debounce!!!'));
   getWidth();
   if (params.lastWidth === params.width) {
     return;
