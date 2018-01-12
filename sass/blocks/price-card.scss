@@ -6,6 +6,9 @@
   transition-duration: 500ms;
     &:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); // TODO: значение прозрачности - 0.1
+      .price-canvas__canvas {
+        opacity: 1;
+      }
       .price-canvas__price-value {
         color: #fff;
       }

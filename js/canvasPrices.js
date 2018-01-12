@@ -31,7 +31,8 @@ const createGradient = (ctx) => {
   return gradient;
 };
 
-const drawPentagon = (canvas, ctx, fillStyle, alpha) => {
+const drawPentagon = (canvas, fillStyle, alpha) => {
+  const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.globalAlpha = alpha;
@@ -45,34 +46,38 @@ const drawPentagon = (canvas, ctx, fillStyle, alpha) => {
   ctx.fill();
 };
 
-const drawAnimation = (startTime, canvas, ctx, color) => {
-  const intervalID = setInterval(() => {
-    const currTime = Date.now();
-    const progress = currTime - startTime;
-    const alphaValue = progress / params.animationLength;
-    drawPentagon(canvas, ctx, color, alphaValue);
-  }, 20);
-  setTimeout(() => clearInterval(intervalID), params.animationLength);
-};
+// const drawAnimation = (startTime, canvas, ctx, color) => {
+//   const intervalID = setInterval(() => {
+//     const currTime = Date.now();
+//     const progress = currTime - startTime;
+//     const alphaValue = progress / params.animationLength;
+//     drawPentagon(canvas, ctx, color, alphaValue);
+//   }, 20);
+//   setTimeout(() => clearInterval(intervalID), params.animationLength);
+// };
 
 const createPriceCanvasElement = (singleCard) => {
-  const wrapper = singleCard.querySelector('.price-card__wrapper');
+  // const wrapper = singleCard.querySelector('.price-card__wrapper');
+  const backgroundCanvas = singleCard.querySelector('.price-canvas__background');
   const canvas = singleCard.querySelector('.price-canvas__canvas');
-  const ctx = canvas.getContext('2d');
-  const gradient = createGradient(ctx);
+  const gradient = createGradient(canvas.getContext('2d'));
+
+
+  setCanvasSize(backgroundCanvas);
+  drawPentagon(backgroundCanvas, params.colorDefault, 1);
 
   setCanvasSize(canvas);
-  drawPentagon(canvas, ctx, params.colorDefault, 1);
+  drawPentagon(canvas, gradient, 1);
 
-  wrapper.addEventListener('mouseenter', () => {
-    const startTime = Date.now();
-    drawAnimation(startTime, canvas, ctx, gradient);
-  });
+  // wrapper.addEventListener('mouseenter', () => {
+  //   const startTime = Date.now();
+  //   drawAnimation(startTime, canvas, ctx, gradient);
+  // });
 
 
-  wrapper.addEventListener('mouseleave', () => {
-    setTimeout(() => drawPentagon(canvas, ctx, params.colorDefault, 1), params.animationLength);
-  });
+  // wrapper.addEventListener('mouseleave', () => {
+  //   setTimeout(() => drawPentagon(canvas, ctx, params.colorDefault, 1), params.animationLength);
+  // });
 };
 
 // Выполнение скрипта

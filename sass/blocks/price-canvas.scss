@@ -1,8 +1,16 @@
 .price-canvas {
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   &__canvas {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+    transition-duration: 500ms;
   }
   &__price-value {
     position: absolute;
@@ -13,6 +21,7 @@
     font-family: Dosis;
     font-weight: 500;
     font-size: 48px;
+    transition-duration: 500ms;
   }
   &__sup {
     font-size: 18px;

@@ -129,6 +129,8 @@ body {
     transition-duration: 500ms; }
     .price-card__wrapper:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+      .price-card__wrapper:hover .price-canvas__canvas {
+        opacity: 1; }
       .price-card__wrapper:hover .price-canvas__price-value {
         color: #fff; }
   .price-card__header {
@@ -138,10 +140,17 @@ body {
     height: 80px;
     margin-bottom: 40px; }
 
-.price-canvas__canvas {
+.price-canvas__background {
   position: absolute;
   top: 0;
   left: 0; }
+
+.price-canvas__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: 500ms; }
 
 .price-canvas__price-value {
   position: absolute;
@@ -151,7 +160,8 @@ body {
           transform: translate(-50%, -50%);
   font-family: Dosis;
   font-weight: 500;
-  font-size: 48px; }
+  font-size: 48px;
+  transition-duration: 500ms; }
 
 .price-canvas__sup {
   font-size: 18px;
