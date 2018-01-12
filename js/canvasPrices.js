@@ -11,7 +11,6 @@ const params = {
   colorStart: '#fd712c',
   colorEnd: '#f21780',
   colorDefault: 'white',
-  animationLength: 500,
 };
 
 const getWidth = () => {
@@ -31,11 +30,10 @@ const createGradient = (ctx) => {
   return gradient;
 };
 
-const drawPentagon = (canvas, fillStyle, alpha) => {
+const drawPentagon = (canvas, fillStyle) => {
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  ctx.globalAlpha = alpha;
   ctx.fillStyle = fillStyle;
   ctx.beginPath();
   ctx.moveTo(0, 0);
@@ -46,38 +44,16 @@ const drawPentagon = (canvas, fillStyle, alpha) => {
   ctx.fill();
 };
 
-// const drawAnimation = (startTime, canvas, ctx, color) => {
-//   const intervalID = setInterval(() => {
-//     const currTime = Date.now();
-//     const progress = currTime - startTime;
-//     const alphaValue = progress / params.animationLength;
-//     drawPentagon(canvas, ctx, color, alphaValue);
-//   }, 20);
-//   setTimeout(() => clearInterval(intervalID), params.animationLength);
-// };
-
 const createPriceCanvasElement = (singleCard) => {
-  // const wrapper = singleCard.querySelector('.price-card__wrapper');
   const backgroundCanvas = singleCard.querySelector('.price-canvas__background');
   const canvas = singleCard.querySelector('.price-canvas__canvas');
   const gradient = createGradient(canvas.getContext('2d'));
 
-
   setCanvasSize(backgroundCanvas);
-  drawPentagon(backgroundCanvas, params.colorDefault, 1);
+  drawPentagon(backgroundCanvas, params.colorDefault);
 
   setCanvasSize(canvas);
-  drawPentagon(canvas, gradient, 1);
-
-  // wrapper.addEventListener('mouseenter', () => {
-  //   const startTime = Date.now();
-  //   drawAnimation(startTime, canvas, ctx, gradient);
-  // });
-
-
-  // wrapper.addEventListener('mouseleave', () => {
-  //   setTimeout(() => drawPentagon(canvas, ctx, params.colorDefault, 1), params.animationLength);
-  // });
+  drawPentagon(canvas, gradient);
 };
 
 // Выполнение скрипта
