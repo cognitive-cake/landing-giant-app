@@ -5,7 +5,7 @@
   background-color: rgba(252, 206, 138, 0.795);
   transition-duration: 500ms;
     &:hover {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); // TODO: значение прозрачности - 0.1
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       .price-canvas__canvas {
         opacity: 1;
       }
@@ -23,6 +23,7 @@
     margin-bottom: 40px;
   }
   &__features {
+
   }
   &__btn {
 
