@@ -54,6 +54,18 @@
   src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v18-latin-700.woff2") format("woff2"), url("../fonts/roboto-v18-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
+@-webkit-keyframes change-gradient {
+  0% {
+    background: #f21780; }
+  100% {
+    background: #fd712c; } }
+
+@keyframes change-gradient {
+  0% {
+    background: #f21780; }
+  100% {
+    background: #fd712c; } }
+
 body {
   font-family: "Roboto", Arial, sans-serif; }
 
@@ -173,6 +185,11 @@ body {
 .reviews {
   padding-top: 120px;
   padding-bottom: 120px; }
+  .reviews__header {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px; }
 
 .video {
   position: relative;
@@ -192,6 +209,12 @@ body {
             transform: translate(-50%, -50%);
     border-radius: 50%;
     background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
+    .video__play-btn:hover {
+      cursor: pointer; }
+    .video__play-btn:active {
+      cursor: pointer;
+      top: 50.2%;
+      box-shadow: inset 0px 5px 30px -3px rgba(0, 0, 0, 0.5); }
     .video__play-btn::after {
       content: '';
       position: absolute;
@@ -200,6 +223,6 @@ body {
       height: 29px;
       top: 50%;
       left: 50%;
-      -webkit-transform: translate(-45%, -50%);
-              transform: translate(-45%, -50%);
+      -webkit-transform: translate(-42%, -50%);
+              transform: translate(-42%, -50%);
       background-image: url("../img/play-icon.svg"); }
