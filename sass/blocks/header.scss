@@ -30,5 +30,18 @@
 
   &-title {
     margin-bottom: 220px;
+
+    &-wrapper {
+      color: #fff;
+      text-shadow: 0px 0px 6px rgb(0, 0, 0);
+
+      & h1 {
+        font-family: 'Dosis', 'Roboto', Arial, sans-serif;
+        font-size: 54px;
+        font-weight: 600;
+        line-height: 60px;
+
+      }
+    }
   }
 }
