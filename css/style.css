@@ -73,6 +73,17 @@ body {
   -webkit-box-flex: 0;
           flex-grow: 0; }
 
+.download {
+  min-height: 474px;
+  padding-top: 120px;
+  background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
+  .download__header {
+    color: #fff;
+    font-family: 'Dosis';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 24px; }
+
 .features-item p {
   color: #777777; }
 
