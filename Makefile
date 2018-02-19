@@ -1,13 +1,13 @@
 install:
 	npm install
 
-start:
-	npm run gulp-serve
+server:
+	npm run serve
 
 compile:
-	npm run gulp-pug
-	npm run gulp-style
-	npm run bundle
+	npm run pug
+	npm run style
+	npm run js-bundle
 
 lint:
 	npm run eslint js/*.js

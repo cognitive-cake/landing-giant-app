@@ -38,12 +38,12 @@
   },
   "scripts": {
     "eslint": "eslint",
-    "gulp-build": "gulp build",
-    "gulp-serve": "gulp serve",
-    "gulp-style": "gulp style-project",
-    "gulp-pug": "gulp pug",
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "style": "gulp style",
+    "pug": "gulp pug",
     "gulp-babel": "gulp babel",
-    "bundle": "browserify js/*.js -o js/dist/bundle.js -t [ babelify --presets [ es2015 ] ] --debug"
+    "js-bundle": "browserify js/*.js -o js/dist/bundle.js -t [ babelify --presets [ es2015 ] ] --debug"
   },
   "editorconfig-cli": [
     "*.html",
