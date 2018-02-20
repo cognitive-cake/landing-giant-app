@@ -92,6 +92,6 @@ gulp.task('serve', function () {
 
   gulp.watch('sass/**/*.{scss,sass}', ['style']);
   gulp.watch('pug/**/*.pug', ['pug']);
-  gulp.watch('js/*.js', ['babel']);
+  // gulp.watch('js/*.js', ['babel']);
   gulp.watch('*.html').on('change', server.reload);
 });
