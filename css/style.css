@@ -78,6 +78,10 @@ body {
   padding-top: 120px;
   background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
   .download__header {
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
     color: #fff;
     font-family: 'Dosis';
     font-weight: 400;
@@ -196,7 +200,7 @@ body {
   padding-top: 120px;
   padding-bottom: 120px; }
   .prices__header {
-    max-width: 650px;
+    max-width: 660px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 80px; }
