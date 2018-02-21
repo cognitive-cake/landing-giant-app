@@ -154,8 +154,18 @@ body {
             transform: translate(-50%, -50%); }
 
 .footer {
-  min-height: 182px;
+  min-height: 180px;
+  padding-top: 55px;
   background-color: #222222; }
+  .footer__links-wrapper {
+    margin-bottom: 20px; }
+  .footer__links:not(:last-child) {
+    margin-right: 30px; }
+  .footer__copyright {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px; }
 
 .gallery {
   padding-top: 120px;
