@@ -1,5 +1,5 @@
 const pricesSection = document.querySelector('.prices');
-const arrayOfCards = pricesSection.querySelectorAll('.price-card');
+const arrayOfCards = pricesSection.querySelectorAll('.prices-card');
 const firstPriceCard = arrayOfCards[0];
 
 const params = {
@@ -14,7 +14,7 @@ const params = {
 };
 
 const getWidth = () => {
-  const priceBlock = firstPriceCard.querySelector('.price-card__price');
+  const priceBlock = firstPriceCard.querySelector('.prices-card__price');
   params.width = priceBlock.clientWidth;
 };
 
@@ -45,8 +45,8 @@ const drawPentagon = (canvas, fillStyle) => {
 };
 
 const createPriceCanvasElement = (singleCard) => {
-  const backgroundCanvas = singleCard.querySelector('.price-canvas__background');
-  const canvas = singleCard.querySelector('.price-canvas__canvas');
+  const backgroundCanvas = singleCard.querySelector('.prices-canvas__background');
+  const canvas = singleCard.querySelector('.prices-canvas__canvas');
   const gradient = createGradient(canvas.getContext('2d'));
 
   setCanvasSize(backgroundCanvas);
