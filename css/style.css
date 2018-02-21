@@ -73,6 +73,28 @@ body {
   -webkit-box-flex: 0;
           flex-grow: 0; }
 
+.section-header {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  text-align: center; }
+  .section-header h2 {
+    color: #222222;
+    font-family: 'Dosis';
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 30px; }
+  .section-header p {
+    color: #777777;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px; }
+  .section-header--white h2 {
+    color: #fff;
+    font-weight: 400; }
+
 .header {
   position: relative;
   margin-bottom: 120px;
@@ -109,16 +131,6 @@ body {
   padding-top: 110px;
   padding-bottom: 120px;
   background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
-  .download__header {
-    max-width: 660px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 70px;
-    color: #fff;
-    font-family: 'Dosis';
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 24px; }
 
 .download-button {
   display: -webkit-box;
@@ -188,10 +200,6 @@ body {
   padding-top: 120px;
   padding-bottom: 120px;
   background-color: #f8fafc; }
-  .gallery__header p {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto; }
 
 .preview {
   padding-top: 120px;
@@ -200,11 +208,6 @@ body {
 .prices {
   padding-top: 120px;
   padding-bottom: 120px; }
-  .prices__header {
-    max-width: 660px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px; }
 
 .prices-card {
   margin-bottom: 30px; }
@@ -257,11 +260,6 @@ body {
 .reviews {
   padding-top: 120px;
   padding-bottom: 120px; }
-  .reviews__header {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px; }
 
 .video {
   position: relative;

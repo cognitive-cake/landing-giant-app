@@ -1,12 +1,15 @@
 // @import "bootstrap/scss/bootstrap.scss";
+// basic
 @import "./fonts.scss";
 @import "./variables.scss";
 @import "./mixins.scss";
 @import "./animations.scss";
 @import "./global.scss";
 
+// common blocks
+@import "./blocks/section-header.scss";
 
-
+// primary blocks
 @import "./blocks/page-header/header/header.scss";
 
 @import "./blocks/page-main-section/download/download.scss";
