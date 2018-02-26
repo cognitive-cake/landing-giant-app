@@ -98,10 +98,10 @@ body {
 .button {
   display: inline-block;
   height: 40px;
-  box-sizing: border-box;
   padding-left: 40px;
   padding-right: 40px;
-  border: 5px solid transparent;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-radius: 20px;
   vertical-align: middle;
   text-align: center;
@@ -118,8 +118,7 @@ body {
   .button:hover {
     color: inherit;
     text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 4px lightgray; }
 
 .header {
   position: relative;
