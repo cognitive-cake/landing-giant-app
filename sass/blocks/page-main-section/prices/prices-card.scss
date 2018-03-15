@@ -2,7 +2,7 @@
   margin-bottom: 30px;
 
   &__wrapper {
-  background-color: rgba(252, 206, 138, 0.795);
+  background-color: $color-bg-light;
   transition-duration: 500ms;
     &:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
