@@ -16,16 +16,47 @@
   }
   &__header {
     display: block;
+    font-family: 'Dosis', 'Arial', sans-serif;
   }
   &__price {
     position: relative;
     height: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 65px;
   }
   &__features {
-
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 40px;
+    & li {
+      line-height: 30px;
+      font-size: 14px;
+      font-weight: 300;
+      color: $text-grey;
+      border-bottom: 1px dashed $color-grey;
+      &:last-child {
+        border: none;
+      }
+    }
   }
-  &__btn {
+  &__btns {
+    padding-bottom: 40px;
+  }
+  &__btn-header {
+    display: block;
+    margin-bottom: 14px;
+    color: $text-grey;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23.95px;
 
+    &:hover, &:focus {
+      color: #000;
+    }
+  }
+  &__button {
+    display: block;
+    width: 166px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
