@@ -41,10 +41,10 @@
   &__btns {
     padding-bottom: 40px;
   }
-  &__btn-header {
+  &__trial-link {
     display: block;
     margin-bottom: 14px;
-    color: $text-grey;
+    color: #aaaaaa;
     font-size: 14px;
     font-weight: 300;
     line-height: 23.95px;
@@ -58,5 +58,7 @@
     width: 166px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
+    font-weight: 500;
   }
 }
