@@ -2,13 +2,11 @@
   display: inline-block;
   height: 40px;
 
-  // box-sizing: border-box;
   padding-left: 40px !important;
   padding-right: 40px !important;
   padding-top: 5px;
   padding-bottom: 5px;
 
-  //border: 5px solid transparent;
   border-radius: 20px;
 
   vertical-align: middle;
@@ -22,6 +20,7 @@
   font-weight: 500;
   line-height: 30px;
   white-space: nowrap;
+
 
   transition-property: box-shadow, border-color;
   transition-duration: 0.5s;
@@ -37,21 +36,6 @@
     box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(0, 0, 0, 0.1);
   }
 
-  // &--gradient {
-  // background-image: $gradient;
-  // color: #fff;
-
-  //   &:hover, &:focus {
-  //     color: #fff;
-  //     text-decoration: none;
-  //     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(0, 0, 0, 0.1);
-  //   }
-
-  //   &:active {
-  //     box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(0, 0, 0, 0.1);
-  //   }
-  // }
-
   &--font-black {
     color: black !important;
   }
@@ -59,5 +43,10 @@
   &--width-sm {
     width: 139px !important;
 
+  }
+
+  &--with-border {
+    border: 1px solid $color-grey;
+    line-height: 28px;
   }
 }

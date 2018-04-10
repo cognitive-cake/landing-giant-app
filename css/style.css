@@ -125,6 +125,9 @@ body {
     color: black !important; }
   .button--width-sm {
     width: 139px !important; }
+  .button--with-border {
+    border: 1px solid #eeeeee;
+    line-height: 28px; }
 
 .header {
   position: relative;
@@ -246,7 +249,8 @@ body {
     background-color: #f8fafc;
     transition-duration: 500ms; }
     .prices-card__wrapper:hover {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      background-color: #fff; }
       .prices-card__wrapper:hover .prices-canvas__canvas {
         opacity: 1; }
       .prices-card__wrapper:hover .prices-canvas__price-value {
@@ -282,7 +286,6 @@ body {
     .prices-card__trial-link:hover, .prices-card__trial-link:focus {
       color: #000; }
   .prices-card__button {
-    display: block;
     width: 166px;
     margin-left: auto;
     margin-right: auto;
