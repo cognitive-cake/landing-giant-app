@@ -2,6 +2,11 @@ const buyButtons = document
   .querySelector('.prices')
   .querySelectorAll('.prices-card__button');
 
+const PARAMS = {
+  colorStart: '#fd712c',
+  colorEnd: '#f21780',
+};
+
 buyButtons.forEach((node) => {
   const btnWidth = node.clientWidth;
   const btnHeight = node.clientHeight;
@@ -13,8 +18,8 @@ buyButtons.forEach((node) => {
   const ctx = canvas.getContext('2d');
 
   const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  gradient.addColorStop(0, '#fd712c');
-  gradient.addColorStop(1, '#f21780');
+  gradient.addColorStop(0, PARAMS.colorStart);
+  gradient.addColorStop(1, PARAMS.colorEnd);
 
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
