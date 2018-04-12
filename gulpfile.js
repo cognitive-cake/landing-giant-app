@@ -72,14 +72,14 @@ gulp.task('pug', function buildHTML() {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task("babel", function () {
-  return gulp.src("js/*.js")
-    .pipe(sourcemaps.init())
-    .pipe(babel())
-    .pipe(concat("all.js"))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("js/dist"));
-});
+// gulp.task("babel", function () {
+//   return gulp.src("js/*.js")
+//     .pipe(sourcemaps.init())
+//     .pipe(babel())
+//     .pipe(concat("all.js"))
+//     .pipe(sourcemaps.write())
+//     .pipe(gulp.dest("js/dist"));
+// });
 
 gulp.task('serve', function () {
   server.init({

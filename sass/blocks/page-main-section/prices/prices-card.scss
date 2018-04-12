@@ -13,6 +13,13 @@
       .canvas-price__price-value {
         color: #fff;
       }
+
+      .canvas-buy-button {
+        opacity: 1;
+      }
+      a.prices-card__button span{
+        color: #fff;
+      }
     }
   }
   &__header {
@@ -55,10 +62,21 @@
     }
   }
   &__button {
+    position: relative;
     width: 166px;
     margin-left: auto;
     margin-right: auto;
     font-size: 14px;
     font-weight: 500;
+    overflow: hidden;
+
+    & span {
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 500ms;
+    }
   }
 }

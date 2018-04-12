@@ -255,6 +255,10 @@ body {
         opacity: 1; }
       .prices-card__wrapper:hover .canvas-price__price-value {
         color: #fff; }
+      .prices-card__wrapper:hover .canvas-buy-button {
+        opacity: 1; }
+      .prices-card__wrapper:hover a.prices-card__button span {
+        color: #fff; }
   .prices-card__header {
     display: block;
     font-family: 'Dosis', 'Arial', sans-serif; }
@@ -286,11 +290,21 @@ body {
     .prices-card__trial-link:hover, .prices-card__trial-link:focus {
       color: #000; }
   .prices-card__button {
+    position: relative;
     width: 166px;
     margin-left: auto;
     margin-right: auto;
     font-size: 14px;
-    font-weight: 500; }
+    font-weight: 500;
+    overflow: hidden; }
+    .prices-card__button span {
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      transition: 500ms; }
 
 .canvas-price__background {
   position: absolute;
@@ -321,6 +335,13 @@ body {
 
 .canvas-price__sub {
   font-size: 18px; }
+
+.canvas-buy-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: 500ms; }
 
 .reviews {
   padding-top: 120px;
