@@ -45,8 +45,8 @@ const drawPentagon = (canvas, fillStyle) => {
 };
 
 const createPriceCanvasElement = (singleCard) => {
-  const backgroundCanvas = singleCard.querySelector('.prices-canvas__background');
-  const canvas = singleCard.querySelector('.prices-canvas__canvas');
+  const backgroundCanvas = singleCard.querySelector('.canvas-price__background');
+  const canvas = singleCard.querySelector('.canvas-price__canvas');
   const gradient = createGradient(canvas.getContext('2d'));
 
   setCanvasSize(backgroundCanvas);

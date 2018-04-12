@@ -251,9 +251,9 @@ body {
     .prices-card__wrapper:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       background-color: #fff; }
-      .prices-card__wrapper:hover .prices-canvas__canvas {
+      .prices-card__wrapper:hover .canvas-price__canvas {
         opacity: 1; }
-      .prices-card__wrapper:hover .prices-canvas__price-value {
+      .prices-card__wrapper:hover .canvas-price__price-value {
         color: #fff; }
   .prices-card__header {
     display: block;
@@ -277,7 +277,7 @@ body {
   .prices-card__btns {
     padding-bottom: 40px; }
   .prices-card__trial-link {
-    display: block;
+    display: inline-block;
     margin-bottom: 14px;
     color: #aaaaaa;
     font-size: 14px;
@@ -292,19 +292,19 @@ body {
     font-size: 14px;
     font-weight: 500; }
 
-.prices-canvas__background {
+.canvas-price__background {
   position: absolute;
   top: 0;
   left: 0; }
 
-.prices-canvas__canvas {
+.canvas-price__canvas {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
   transition-duration: 500ms; }
 
-.prices-canvas__price-value {
+.canvas-price__price-value {
   position: absolute;
   left: 50%;
   top: 60%;
@@ -315,11 +315,11 @@ body {
   font-size: 48px;
   transition-duration: 500ms; }
 
-.prices-canvas__sup {
+.canvas-price__sup {
   font-size: 18px;
   vertical-align: 21px; }
 
-.prices-canvas__sub {
+.canvas-price__sub {
   font-size: 18px; }
 
 .reviews {

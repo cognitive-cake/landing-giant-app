@@ -7,10 +7,10 @@
     &:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       background-color: #fff;
-      .prices-canvas__canvas {
+      .canvas-price__canvas {
         opacity: 1;
       }
-      .prices-canvas__price-value {
+      .canvas-price__price-value {
         color: #fff;
       }
     }
@@ -43,7 +43,7 @@
     padding-bottom: 40px;
   }
   &__trial-link {
-    display: block;
+    display: inline-block;
     margin-bottom: 14px;
     color: #aaaaaa;
     font-size: 14px;
