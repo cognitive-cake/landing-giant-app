@@ -56,16 +56,19 @@ const createPriceCanvasElement = (singleCard) => {
   drawPentagon(canvas, gradient);
 };
 
-// script run
-getWidth();
-arrayOfCards.forEach(createPriceCanvasElement);
-params.lastWidth = params.width;
-
-window.addEventListener('resize', () => {
+const canvasPriceRun = () => {
   getWidth();
-  if (params.lastWidth === params.width) {
-    return;
-  }
   arrayOfCards.forEach(createPriceCanvasElement);
   params.lastWidth = params.width;
-});
+
+  window.addEventListener('resize', () => {
+    getWidth();
+    if (params.lastWidth === params.width) {
+      return;
+    }
+    arrayOfCards.forEach(createPriceCanvasElement);
+    params.lastWidth = params.width;
+  });
+};
+
+export default canvasPriceRun;

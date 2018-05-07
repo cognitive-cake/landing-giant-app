@@ -43,7 +43,7 @@
     "style": "gulp style",
     "pug": "gulp pug",
     "gulp-babel": "gulp babel",
-    "js-bundle": "browserify ./js/*.js -o ./js/dist/bundle.js -t [ babelify --presets [ es2015 ] ] --debug"
+    "js-bundle": "browserify ./js/main.js -o ./js/dist/bundle.js -t [ babelify --presets [ es2015 ] ] --debug"
   },
   "editorconfig-cli": [
     "*.html",
