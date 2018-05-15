@@ -70,8 +70,7 @@ body {
   font-family: 'Roboto', Arial, sans-serif; }
 
 .navbar-collapse {
-  -webkit-box-flex: 0;
-          flex-grow: 0; }
+  flex-grow: 0; }
 
 .section-header {
   max-width: 660px;
@@ -156,7 +155,6 @@ body {
     margin-bottom: 10px;
     color: #fff;
     text-shadow: 0px 0px 6px black;
-    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px; }
     .header-title__wrapper h1 {
       font-family: 'Dosis', 'Roboto', Arial, sans-serif;
@@ -171,7 +169,6 @@ body {
   background-image: linear-gradient(to right, #fd712c 0%, #f21780 100%); }
 
 .download-button {
-  display: -webkit-box;
   display: flex;
   min-height: 115px;
   margin-bottom: 30px;
