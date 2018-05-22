@@ -2,8 +2,16 @@
   "name": "landing-giant-app",
   "version": "1.0.0",
   "description": "Landing template 'Giant App'",
+  "scripts": {
+    "eslint": "eslint",
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "style": "gulp style",
+    "pug": "gulp pug",
+    "gulp-babel": "gulp babel",
+    "js-bundle": "browserify ./js/index.js -o ./js/dist/bundle.js -t [ babelify --presets [ es2015 ] ] --debug"
+  },
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.x",
     "autoprefixer": "^7.1.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -35,15 +43,6 @@
     "pug-lint": "^2.5.0",
     "pug-lint-config-clock": "^2.0.0",
     "run-sequence": "^2.1.0"
-  },
-  "scripts": {
-    "eslint": "eslint",
-    "build": "gulp build",
-    "serve": "gulp serve",
-    "style": "gulp style",
-    "pug": "gulp pug",
-    "gulp-babel": "gulp babel",
-    "js-bundle": "browserify ./js/main.js -o ./js/dist/bundle.js -t [ babelify --presets [ es2015 ] ] --debug"
   },
   "editorconfig-cli": [
     "*.html",
