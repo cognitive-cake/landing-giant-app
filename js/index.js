@@ -1,6 +1,6 @@
 import renderCanvasButton from './canvasButton';
 import renderCanvasPrice from './canvasPrice';
-import * as renderGallerySlider from './gallerySlider';
+import renderGallerySlider from './gallerySlider';
 
 
 renderCanvasButton();
