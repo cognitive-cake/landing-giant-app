@@ -58,6 +58,13 @@ block main-content
         header.section-header
           h2 Take a look at our screenshots
           p Everyone’s reasons for learning user interface design are different. If you’re already a developer, or a PM, or a UX designer, why develop this totally separate skill?
+        .slider.slider-screenshots
+          .slider__navigation.slider-nav
+            .slider-nav__prev.slider-nav__btn(tabindex='0')
+              span.slider-nav__arrow.fas.fa-long-arrow-alt-left
+            .slider-nav__next.slider-nav__btn(tabindex='0')
+              span.slider-nav__arrow.fas.fa-long-arrow-alt-right
+          .slider__gallery.slider-screenshots__gallery#first-slider
     section.prices.container#pricing
       .row
         header.section-header

@@ -76,7 +76,7 @@ gulp.task('pug', function buildHTML() {
 //   return gulp.src("js/*.js")
 //     .pipe(sourcemaps.init())
 //     .pipe(babel())
-//     .pipe(concat("all.js"))
+//     .pipe(concat("bundle.js"))
 //     .pipe(sourcemaps.write())
 //     .pipe(gulp.dest("js/dist"));
 // });
