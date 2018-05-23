@@ -1,7 +1,9 @@
-import canvasButtonRun from './canvasButton';
-import canvasPriceRun from './canvasPrice';
-import sliderScreenshotsRun from './sliderScreenshots';
+import renderCanvasButton from './canvasButton';
+import renderCanvasPrice from './canvasPrice';
+import * as renderGallerySlider from './gallerySlider';
 
-canvasButtonRun();
-canvasPriceRun();
-sliderScreenshotsRun();
+
+renderCanvasButton();
+renderCanvasPrice();
+renderGallerySlider();
+

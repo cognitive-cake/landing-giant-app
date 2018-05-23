@@ -7,7 +7,7 @@ const PARAMS = {
   colorEnd: '#f21780',
 };
 
-const canvasButtonRun = () => {
+const renderCanvasButton = () => {
   buyButtons.forEach((node) => {
     const btnWidth = node.clientWidth;
     const btnHeight = node.clientHeight;
@@ -27,4 +27,4 @@ const canvasButtonRun = () => {
   });
 };
 
-export default canvasButtonRun;
+export default renderCanvasButton;

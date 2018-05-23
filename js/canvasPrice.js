@@ -56,7 +56,7 @@ const createPriceCanvasElement = (singleCard) => {
   drawPentagon(canvas, gradient);
 };
 
-const canvasPriceRun = () => {
+const renderCanvasPrice = () => {
   getWidth();
   arrayOfCards.forEach(createPriceCanvasElement);
   params.lastWidth = params.width;
@@ -71,4 +71,4 @@ const canvasPriceRun = () => {
   });
 };
 
-export default canvasPriceRun;
+export default renderCanvasPrice;
