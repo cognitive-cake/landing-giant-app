@@ -1,0 +1,19 @@
+.slider-gallery {
+  position: relative;
+  height: 500px;
+
+  &__nav-prev {
+    position: absolute;
+    left: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__nav-next {
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
