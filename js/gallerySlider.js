@@ -1,3 +1,6 @@
-const renderGallerySlider = () => $('#first-slider').html('Test Test Test');
+const renderGallerySlider = () => {
+  $('#placeholder').html('work in progress');
+};
+
 
 export default renderGallerySlider;
